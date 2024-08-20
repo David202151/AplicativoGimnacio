@@ -2,6 +2,7 @@
     <nav class="sidebar-nav">
         <ul class="nav">
             <li class="nav-title">{{ trans('brackets/admin-ui::admin.sidebar.content') }}</li>
+            
             <li class="nav-item"><a class="nav-link" href="{{ url('admin/membresia') }}"><i class="nav-icon icon-umbrella"></i> {{ trans('admin.membresium.title') }}</a></li>
            <li class="nav-item"><a class="nav-link" href="{{ url('admin/descuentos') }}"><i class="nav-icon icon-plane"></i> {{ trans('admin.descuento.title') }}</a></li>
            <li class="nav-item"><a class="nav-link" href="{{ url('admin/clientes') }}"><i class="nav-icon icon-drop"></i> {{ trans('admin.cliente.title') }}</a></li>
