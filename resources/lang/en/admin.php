@@ -69,6 +69,24 @@ return [
         ],
     ],
 
+    'producto' => [
+        'title' => 'Producto',
+
+        'actions' => [
+            'index' => 'Producto',
+            'create' => 'New Producto',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'nombreProducto' => 'NombreProducto',
+            'valorProducto' => 'ValorProducto',
+            'descripcion' => 'Descripcion',
+            
+        ],
+    ],
+
     'cliente' => [
         'title' => 'Cliente',
 

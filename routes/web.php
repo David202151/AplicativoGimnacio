@@ -77,6 +77,21 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
 /* Auto-generated admin routes */
 Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
     Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('productos')->name('productos/')->group(static function() {
+            Route::get('/',                                             'ProductoController@index')->name('index');
+            Route::get('/create',                                       'ProductoController@create')->name('create');
+            Route::post('/',                                            'ProductoController@store')->name('store');
+            Route::get('/{producto}/edit',                             'ProductoController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'ProductoController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{producto}',                                 'ProductoController@update')->name('update');
+            Route::delete('/{producto}',                               'ProductoController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
         Route::prefix('clientes')->name('clientes/')->group(static function() {
             Route::get('/',                                             'ClienteController@index')->name('index');
             Route::get('/create',                                       'ClienteController@create')->name('create');

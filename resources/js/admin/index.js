@@ -4,3 +4,4 @@ import './profile-edit-password';
 import './membresium';
 import './descuento';
 import './cliente';
+import './producto';
